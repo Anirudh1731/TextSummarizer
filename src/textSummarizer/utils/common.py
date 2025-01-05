@@ -7,8 +7,7 @@ from box import ConfigBox
 from pathlib import Path
 from typing import Any
 
-
-@ensure_annotations
+@ensure_annotations #this makes sure that the input to function is given according to the input data type
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
@@ -32,6 +31,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     except Exception as e:
         raise e
     
+
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
@@ -44,4 +44,3 @@ def create_directories(path_to_directories: list, verbose=True):
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"created directory at: {path}")
-
