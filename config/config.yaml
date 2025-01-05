@@ -1,5 +1,7 @@
 artifacts_root: artifacts
 
+#I need the dataset from source url and then store it as zip in local path and then unzip and then save it
+#Root dir is the main directory inside which all other folders will be created
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
